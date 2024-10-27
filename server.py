@@ -45,7 +45,7 @@ def download_latest_release(download_path='.'):
 	if pet.status_code == 200:
 		data = pet.json()
 		url = data.get('latest')
-		version = url.split("/")[-1]1
+		version = url.split("/")[-1]
 		if version in glob.glob("*.msp"):
 			return version
 		else:
